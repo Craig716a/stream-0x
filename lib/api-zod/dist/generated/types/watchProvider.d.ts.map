@@ -1,0 +1,1 @@
+{"version":3,"file":"watchProvider.d.ts","sourceRoot":"","sources":["../../../src/generated/types/watchProvider.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,WAAW,aAAa;IAC5B,UAAU,EAAE,MAAM,CAAC;IACnB,IAAI,EAAE,MAAM,CAAC;IACb,gBAAgB;IAChB,QAAQ,EAAE,MAAM,GAAG,IAAI,CAAC;IACxB,eAAe,EAAE,MAAM,CAAC;CACzB"}
