@@ -1,17 +1,22 @@
 {
   "name": "workspace",
   "version": "0.0.0",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "dev": "pnpm exec vite --config vite.config.ts --host 0.0.0.0",
-    "build": "pnpm --filter @workspace/stream-world run build",
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "build:stream": "pnpm --filter @workspace/stream-world run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
   "private": true,
   "dependencies": {
-    "@replit/connectors-sdk": "^0.4.3"
+    "@replit/connectors-sdk": "^0.4.3",
+    "next": "16.4.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "catalog:",
